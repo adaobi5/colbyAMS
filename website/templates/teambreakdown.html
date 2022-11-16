@@ -1,32 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
   <div class="page-header">
-    <h3 class="page-title"> Men's Squash Team Dashboard </h3>
+    <h3 class="page-title"> Men's Alpine Skiing Dashboard </h3>
     <nav aria-label="breadcrumb">
     </nav>
   </div>
   <div class="row">
-    <div class="col-sm-4-5 grid-margin stretch-card">
+    <div class="col-4 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Sleep</h4>
+          <h4 class="card-title"> <a class="nav-link" href="/sleep"> Sleep </a> </h4>
           <canvas id="doughnutChart" width="30" height="30"></canvas>
         </div>
       </div>
     </div>
     <div class="column">
-      <div class="row-cols-coach grid-margin stretch-card">
+      <div class="row-5 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Recovery</h4>
+            <h4 class="card-title"> <a class="nav-link" href="/recovery">Recovery</a></h4>
             <canvas id="pieChart" width="20" height="20"></canvas>
           </div>
         </div>
       </div>
-      <div class="row-cols-coach grid-margin stretch-card">
+      <div class="rows-5 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Calorie Intake</h4>
+            <h4 class="card-title"> <a class="nav-link" href="/calories">Calorie Intake</a></h4>
             <canvas id="barChart" width="20" height="20"></canvas>
           </div>
         </div>
@@ -44,7 +44,7 @@
             <div class="athlete-search-head athlete-search-else"> Recovery </div>
             <div class="athlete-search-head athlete-search-else"> Calorie Intake </div>                        
             <ul class="live-search-list" type="None">                     
-              <li>
+              <li class="nav-item coach-link-hover" onclick="location.href='breakdown'">
                 <div class="py-1 athlete-search">
                   <img class="status-img" src="../static/images/color/green.png" alt="image" />
                 </div>
@@ -53,7 +53,7 @@
                 <div class="athlete-search" style="margin-left: -2%;"> 50% </div>
                 <div class="athlete-search" style="margin-left: 1%;"> 89% </div>
               </li>
-              <li>
+              <li class="nav-item coach-link-hover" onclick="location.href='breakdown'">
                 <div class="py-1 athlete-search">
                   <img class="status-img" src="../static/images/color/red.png" alt="image" />
                 </div>
@@ -62,7 +62,7 @@
                 <div class="athlete-search" style="margin-left: -2%;"> 53% </div>
                 <div class="athlete-search" style="margin-left: 1%;"> 81% </div>
               </li>
-              <li>
+              <li class="nav-item coach-link-hover" onclick="location.href='breakdown'">
                 <div class="py-1 athlete-search">
                   <img class="status-img" src="../static/images/color/green.png" alt="image" />
                 </div>
@@ -71,7 +71,7 @@
                 <div class="athlete-search" style="margin-left: -2.6%;"> 70% </div>
                 <div class="athlete-search" style="margin-left: 1%;"> 49% </div>
               </li>
-              <li>
+              <li class="nav-item coach-link-hover" onclick="location.href='breakdown'">
                 <div class="py-1 athlete-search">
                   <img class="status-img" src="../static/images/color/green.png" alt="image" />
                 </div>
@@ -80,7 +80,7 @@
                 <div class="athlete-search" style="margin-left: -2%;"> 50% </div>
                 <div class="athlete-search" style="margin-left: 1%;"> 89% </div>
               </li>
-              <li>
+              <li class="nav-item coach-link-hover" onclick="location.href='breakdown'">
                 <div class="py-1 athlete-search">
                   <img class="status-img" src="../static/images/color/red.png" alt="image" />
                 </div>
@@ -89,7 +89,7 @@
                 <div class="athlete-search" style="margin-left: -2.5%;"> 54% </div>
                 <div class="athlete-search" style="margin-left: 1%;"> 98% </div>
               </li>
-              <li>
+              <li class="nav-item coach-link-hover" onclick="location.href='breakdown'">
                 <div class="py-1 athlete-search">
                   <img class="status-img" src="../static/images/color/yellow.jpg" alt="image" />
                 </div>
@@ -98,7 +98,7 @@
                 <div class="athlete-search" style="margin-left: -2.5%;"> 55% </div>
                 <div class="athlete-search" style="margin-left: 1%;"> 46% </div>
               </li>
-              <li>
+              <li class="nav-item coach-link-hover" onclick="location.href='breakdown'">
                 <div class="py-1 athlete-search">
                   <img class="status-img" src="../static/images/color/red.png" alt="image" />
                 </div>
@@ -117,7 +117,7 @@
         <div class="card-body">
           <h4 class="card-title">Team Overview</h4>
           <button type="button" class="btn btn-outline-secondary btn-fw btn-outline-secondary-coach">Last 10 days <i class="mdi mdi-chevron-down"></i> </button>
-          <button type="button" class="btn btn-secondary btn-primary btn-fw btn-secondary-coach"> <i class="mdi mdi-download"></i> Download CSV</button>
+          <button type="button" class="btn btn-secondary btn-primary btn-fw btn-secondary-coach"> <a class="mdi mdi-download"></i> <a href="../static/images/samples/sampleCSV.csv" download="sampleCSV.csv"> Download CSV </a></button>
           <canvas id="lineChart" style="height:250px"></canvas>
         </div>
       </div>
@@ -125,7 +125,7 @@
     <div class="col-lg-6 grid-margin stretch-card">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Swim McSwimmie</h4>
+          <h4 class="card-title"> Player McPlayer</h4>
           <p id="coach-passage-color">Can only take part in 50% of the practice, and cannot exceed a heart rate of 120, no cutting allowed.</p>
           <div class="card card-inner-left-top">
             <div class="card-body">
@@ -136,7 +136,7 @@
                   <p class="inner-card-color">&nbsp; Avg. 7.1hr</p>
                 </div>
                 <div class="column inner-card-specify">
-                  <h4>&nbsp; 7.1hr</h4>
+                  <h4> 7.1hr</h4>
                   <p class="inner-card-color-1">&nbsp; 23%</p>
                 </div>
               </div>

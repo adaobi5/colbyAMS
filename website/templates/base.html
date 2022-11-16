@@ -227,14 +227,14 @@
                 <div class="profile-desc">
                   <div class="profile-pic">
                     <div class="count-indicator">
-                      <img class="img-xs rounded-circle " src="{{url_for('static', filename='pic-1.png')}}" alt="">
+                      <img class="img-xs rounded-circle " src="../static/images/faces/anne.jfif" alt="">
                       <span class="count bg-success"> </span>
                     </div>
                     <div class="profile-name">
                       <!-- {% with user = current_user %} -->
                       <h5 class="mb-0 font-weight-normal"> {{user.first_name}} {{user.last_name}} </h5>
                       {% if user.access == 3 %}
-                        <span> SuperAdmin </span>
+                        <span> Super Admin </span>
                       {% elif user.access == 2 %}
                         <span> Admin </span>
                       {% elif user.access == 1 %}
